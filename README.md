@@ -1,12 +1,6 @@
----
-title: github-openclaw-easy-tutorial
-description: github-openclaw-easy-tutorial（最简单的 OpenClaw 入门手册）：从零到接飞书/Telegram/WhatsApp、改人设、多 Agent 实践，零基础可读。
-keywords: [OpenClaw, github-openclaw-easy-tutorial, 入门手册, 飞书, Telegram, WhatsApp, AI 助手, 多 Agent, 中文]
----
 
-# github-openclaw-easy-tutorial
 
-**最简单的 OpenClaw 入门手册**（中文）
+# 最简单的 OpenClaw 入门手册
 
 <!-- 教程元数据 -->
 | 项目 | 说明 |
